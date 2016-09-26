@@ -1,0 +1,17 @@
+{
+  "name": "commentpage",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "demchenko.daniil.HP <dan9m@yandex.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/DaniilDem/commentpage",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
