@@ -1,59 +1,64 @@
 <!doctype html>
 <html class="no-js" lang="">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>comment page</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
 
     <link rel="stylesheet" href="styles/main.css">
-  </head>
-  <body>
-    <!--[if lt IE 10]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    
-    <div class="container">
-      <div class="header">
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="container">
+    <div class="header">
 
         <h3 class="text-muted">comment page</h3>
-      </div>
-
-
-      <div class="row">
-
-    <div class="col-md-3 center-block float-none">
-        <form>
-          <div class="form-group">
-            <label for="nameInput">Name</label>
-            <input type="text" class="form-control" id="nameInput" placeholder="Enter Name">
-          </div>
-          <div class="form-group">
-            <label for="themeInput">Theme</label>
-            <input type="text" class="form-control" id="themeInput" placeholder="Enter Theme">
-          </div>
-          <div class="form-group">
-            <label for="commentInput">Comment</label>
-            <textarea class="form-control" id="commentInput" rows="3" placeholder="Enter Comment"></textarea>
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
     </div>
-          
-      </div>
 
-      <div class="footer">
+
+    <div class="row">
+        <div id="commentForm">
+            <div class="col-md-3 center-block float-none">
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for="nameInput">Name</label>
+                        <input type="text" class="form-control" id="nameInput" placeholder="Enter Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="themeInput">Theme</label>
+                        <input type="text" class="form-control" id="themeInput" placeholder="Enter Theme">
+                    </div>
+                    <div class="form-group">
+                        <label for="commentInput">Comment</label>
+                        <textarea class="form-control" id="commentInput" rows="3"
+                                  placeholder="Enter Comment"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="footer">
         <p>comment page</p>
-      </div>
     </div>
-    
+</div>
 
-    <script src="./bower_components/jquery/dist/jquery.js"></script>
-    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="./bower_components/backbone/backbone-min.js"></script>
-    <script src="scripts/main.js"></script>
-  </body>
+
+<script src="./bower_components/jquery/dist/jquery.js"></script>
+<script src="./bower_components/underscore/underscore-min.js"></script>
+<script src="./bower_components/backbone/backbone-min.js"></script>
+<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="scripts/build.js"></script>
+</body>
 </html>
