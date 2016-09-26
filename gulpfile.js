@@ -24,7 +24,7 @@ gulp.task('html', function() {
 
 gulp.task('js', function() {
 
-    gulp.src(['js/*.js', '!js/build.js'])
+    gulp.src(['scripts/*.js', '!scripts/build.js'])
         .pipe(sourcemaps.init())
         .pipe(concat('build.js'))
         .pipe(sourcemaps.write())
@@ -36,7 +36,7 @@ gulp.task('watch', function() {
     livereload.listen();
     gulp.watch('less/*.less', ['less']);
     gulp.watch(["*.html", '*.php'], ['html']);
-    gulp.watch('js/*.js', ['js']);
+    gulp.watch('scripts/*.js', ['js']);
 
 });
 

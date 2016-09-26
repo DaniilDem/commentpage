@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>commentpage</title>
+    <title>comment page</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css" />
@@ -19,12 +19,29 @@
     <div class="container">
       <div class="header">
 
-        <h3 class="text-muted">commentpage</h3>
+        <h3 class="text-muted">comment page</h3>
       </div>
 
 
       <div class="row">
 
+    <div class="col-md-3 center-block float-none">
+        <form>
+          <div class="form-group">
+            <label for="nameInput">Name</label>
+            <input type="text" class="form-control" id="nameInput" placeholder="Enter Name">
+          </div>
+          <div class="form-group">
+            <label for="themeInput">Theme</label>
+            <input type="text" class="form-control" id="themeInput" placeholder="Enter Theme">
+          </div>
+          <div class="form-group">
+            <label for="commentInput">Comment</label>
+            <textarea class="form-control" id="commentInput" rows="3" placeholder="Enter Comment"></textarea>
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
           
       </div>
 
@@ -36,6 +53,7 @@
 
     <script src="./bower_components/jquery/dist/jquery.js"></script>
     <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./bower_components/backbone/backbone-min.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

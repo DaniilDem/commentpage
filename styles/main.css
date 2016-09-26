@@ -13,7 +13,6 @@ body {
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
-.marketing,
 .footer {
   padding-left: 15px;
   padding-right: 15px;
@@ -32,11 +31,19 @@ body {
   padding-bottom: 19px;
 }
 
+.float-none
+{
+  float: none;
+}
+
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
+
+
 
 
