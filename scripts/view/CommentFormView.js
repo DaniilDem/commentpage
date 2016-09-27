@@ -7,18 +7,38 @@ var CommentFormView = Backbone.View.extend({
 
     events: {
         "submit form":          "formSubmit",
-        "click button":   "render",
-        "click .button.delete": "destroy"
+        "change input, textarea":   "changeInput"
     },
 
     initialize: function() {
         this.listenTo(this.model, "change", this.render);
-        console.log(this.$el);
     },
 
-    formSubmit:function ()
+    formSubmit:function (e)
     {
+        e.preventDefault();
         console.log('submit');
+        this.model.save({}, {//TODO: make validate in model
+            success: function (model, respose, options) {
+                console.log("The model has been saved to the server");
+                console.log(respose);
+            },
+            error: function (model, xhr, options) {
+                console.log("Something went wrong while saving the model");
+                console.log(xhr);
+            }
+        });
+    },
+
+    changeInput:function (e)
+    {
+        let elem =  $(e.target);
+        let nameVal = elem.attr('id');
+        let tempObj = {};
+        tempObj[nameVal] = elem.val();
+        this.model.set(tempObj);
+
+        console.log(this.model.toJSON());
 
     },
 
