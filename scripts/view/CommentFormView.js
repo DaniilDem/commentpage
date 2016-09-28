@@ -45,7 +45,7 @@ var CommentFormView = Backbone.View.extend({
 
     sync:function ()
     {
-      alert("sync");
+      console.log("sync comment model");
     },
 
     render: function() {
