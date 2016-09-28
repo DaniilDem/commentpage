@@ -4,9 +4,11 @@
 var CommentFormModel = Backbone.Model.extend({
 
     defaults: {
-        "name":  "",
-        "theme":     "",
-        "comment":    ""
-    }
+        "nameInput":  "",
+        "themeInput":     "",
+        "commentInput":    ""
+    },
+
+    urlRoot: 'http://localhost:1337/api/commentForm'
 
 });

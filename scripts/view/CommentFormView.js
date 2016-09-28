@@ -12,6 +12,7 @@ var CommentFormView = Backbone.View.extend({
 
     initialize: function() {
         this.listenTo(this.model, "change", this.render);
+        this.listenTo(this.model, "sync", this.sync);
     },
 
     formSubmit:function (e)
@@ -40,6 +41,11 @@ var CommentFormView = Backbone.View.extend({
 
         console.log(this.model.toJSON());
 
+    },
+
+    sync:function ()
+    {
+      alert("sync");
     },
 
     render: function() {
