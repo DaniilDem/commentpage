@@ -12,7 +12,8 @@ var CommentsListModel = Backbone.Model.extend({
     },
 
     updateList:function ()
-    { var that = this;
+    {
+        var that = this;
         this.fetch({
             success: function (model, respose, options) {
                 console.log(respose);
@@ -21,6 +22,13 @@ var CommentsListModel = Backbone.Model.extend({
                 console.log(xhr);
             }
         });
+    },
+
+    addOneComment: function (comment)
+    {
+        var commentsArr = this.get('commentsArray');
+        commentsArr.push(comment);
+        this.trigger('change:commentsArray');
     },
 
     urlRoot: 'http://localhost:1337/api/commentsList'

@@ -1,10 +1,15 @@
+var app =
+{
+    commentModel:{},
+    commentsListModel: {}
+}
 
 $(function ()
 {
     console.log('start');
-    var commentModel = new CommentFormModel();
-    var commentView = new CommentFormView({model: commentModel});
+    app.commentModel = new CommentFormModel();
+    var commentView = new CommentFormView({model: app.commentModel});
 
-    var commentsListModel = new CommentsListModel();
-    var commentsListView = new CommentsListView({model: commentsListModel});
+    app.commentsListModel = new CommentsListModel();
+    var commentsListView = new CommentsListView({model: app.commentsListModel});
 });

@@ -39,7 +39,7 @@ MongoClient.connect('mongodb://localhost:27017/commentdb', function (err, db) {
                 } else {
                     console.log('Inserted %d documents into the "comments" collection. The documents inserted with "_id" are:', result.length, result);
 
-                    res.send(200);
+                    res.status(200).json({});//TODO: edit, this not true way
 
                 }
             });
