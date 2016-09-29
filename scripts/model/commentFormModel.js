@@ -9,6 +9,17 @@ var CommentFormModel = Backbone.Model.extend({
         "commentInput":    ""
     },
 
-    urlRoot: 'http://localhost:1337/api/commentForm'
+
+    initialize: function() {
+        this.on("sync", this.modelSync);
+    },
+
+    modelSync:function ()
+    {
+        console.log('comment model sync');
+        app.commentsListModel.addOneComment(this.toJSON());
+    },
+
+    urlRoot: app.serverUrl+'/commentForm'
 
 });

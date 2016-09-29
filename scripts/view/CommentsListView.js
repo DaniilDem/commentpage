@@ -20,7 +20,7 @@ var CommentsListView = Backbone.View.extend({
         var comments = this.model.get('commentsArray');
 
         var commentRowTemplate =_.template($('#commentRow').html());
-        $('#commentsList').html(commentRowTemplate({'comments':comments.reverse()}));
+        $('#commentsList').html(commentRowTemplate({'comments':comments}));
 
     }
 

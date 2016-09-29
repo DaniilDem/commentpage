@@ -27,7 +27,7 @@ var CommentsListModel = Backbone.Model.extend({
     addOneComment: function (comment)
     {
         var commentsArr = this.get('commentsArray');
-        commentsArr.push(comment);
+        commentsArr.unshift(comment);
         this.trigger('change:commentsArray');
     },
 

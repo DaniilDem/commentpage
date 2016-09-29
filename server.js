@@ -26,7 +26,7 @@ MongoClient.connect('mongodb://localhost:27017/commentdb', function (err, db)
             var comments = db.collection('comments').find();
             comments.toArray(function (err, comment)
             {
-                res.status(200).json({'commentsArray': comment});
+                res.status(200).json({'commentsArray': comment.reverse()});
             });
         });
 
