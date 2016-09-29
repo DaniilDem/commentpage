@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "body-parser": "^1.15.2",
+    "conform": "^0.2.14",
     "cors": "^2.8.1",
     "express": "^4.14.0",
     "gulp": "^3.9.1",

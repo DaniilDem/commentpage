@@ -1,8 +1,9 @@
 var app =
 {
     commentModel:{},
-    commentsListModel: {}
-}
+    commentsListModel: {},
+    serverUrl:'http://localhost:1337/api'
+};
 
 $(function ()
 {

@@ -31,6 +31,6 @@ var CommentsListModel = Backbone.Model.extend({
         this.trigger('change:commentsArray');
     },
 
-    urlRoot: 'http://localhost:1337/api/commentsList'
+    urlRoot: app.serverUrl+'/commentsList'
 
 });
