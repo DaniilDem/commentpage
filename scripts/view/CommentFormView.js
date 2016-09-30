@@ -11,13 +11,15 @@ var CommentFormView = Backbone.View.extend({
     },
 
     initialize: function() {
-        this.listenTo(this.model, "change", this.render);
+
     },
 
     formSubmit:function (e)
     {
         e.preventDefault();
         console.log('submit');
+        var that = this;
+        this.clearError();
         this.model.save({}, {//TODO: make validate in model
             success: function (model, respose, options) {
                 console.log("The model has been saved to the server");
@@ -26,6 +28,7 @@ var CommentFormView = Backbone.View.extend({
             error: function (model, xhr, options) {
                 console.log("Something went wrong while saving the model");
                 console.log(xhr);
+                that.renderError(xhr);
             }
         });
     },
@@ -42,8 +45,25 @@ var CommentFormView = Backbone.View.extend({
 
     },
 
-    render: function() {
-        console.log('render');
+    renderError: function(xhr) {
+        console.log('render Error');
+        var errArr = xhr.responseJSON.error;
+
+        var form = $('#commentForm form');
+
+        _.each(errArr, function (item)
+        {
+            var formGroup = form.find('#'+item.property).parent('');
+            formGroup.addClass('has-error');
+            formGroup.find('#'+item.property+'Help').html(item.message);
+        })
+    },
+    
+    clearError:function ()
+    {
+        var form = $('#commentForm form'); 
+        form.find('.form-group').removeClass('has-error');
+        form.find('.help-block').html('');
     }
 
 });
