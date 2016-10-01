@@ -23,3 +23,4 @@ var CommentFormModel = Backbone.Model.extend({
     urlRoot: app.serverUrl+'/commentForm'
 
 });
+//# sourceMappingURL=CommentFormModel.js.map

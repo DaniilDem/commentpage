@@ -14,3 +14,4 @@ $(function ()
     app.commentsListModel = new CommentsListModel();
     var commentsListView = new CommentsListView({model: app.commentsListModel});
 });
+

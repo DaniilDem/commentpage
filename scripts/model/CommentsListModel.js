@@ -34,3 +34,4 @@ var CommentsListModel = Backbone.Model.extend({
     urlRoot: app.serverUrl+'/commentsList'
 
 });
+

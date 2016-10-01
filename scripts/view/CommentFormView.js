@@ -67,3 +67,4 @@ var CommentFormView = Backbone.View.extend({
     }
 
 });
+//# sourceMappingURL=CommentFormView.js.map
