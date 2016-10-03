@@ -11,15 +11,13 @@ body {
   padding-bottom: 20px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .footer {
   padding-left: 15px;
   padding-right: 15px;
+  margin:15px;
 }
 
-
-/* Make the masthead heading the same height as the navigation */
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
@@ -27,10 +25,6 @@ body {
   padding-bottom: 19px;
 }
 
-.float-none
-{
-  /*float: none;*/
-}
 
 
 
