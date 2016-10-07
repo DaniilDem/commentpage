@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     uncss = require('gulp-uncss'),
     cssnano = require('gulp-cssnano'),
     uglify = require('gulp-uglify'),
-    lib    = require('bower-files')();
+    lib    = require('bower-files')(),
     concat = require('gulp-concat');
 
 const cssMinName = 'build.min.css';
